@@ -107,9 +107,10 @@ menu = st.sidebar.radio(
         "🏠 Ana Sayfa & Genel Bakış",
         "📖 Cuma Suresi (Tüm Ayetler ve Tefsiri)",
         "📜 Ayetler ve Sahih Hadisler",
-        "⚖️ Cuma İbadeti ve Fıkhı",
-        "💬 Âlimlerin ve Velîlerin Görüşleri (20 Görüş)",
-        "⚖️ Hukuki Bildirim & Şartlar"
+        "⚖️ Cuma İbadeti, Hutbe ve Fıkhı",
+        "🕌 Adım Adım Cuma Namazının Kılınışı",
+        "💬 Âlimlerin ve Velîlerin Görüşleri",
+        "⚖️ Hukuki Bildirim & Kullanım Şartları"
     ]
 )
 
@@ -251,7 +252,7 @@ elif menu == "📜 Ayetler ve Sahih Hadisler":
             "kaynak": "Müslim, Cuma 17, (854); Tirmizî, Cuma 1, (488)"
         },
         {
-            "metin": "Bir kimse güzelce abdest alır, sonra cumaya gelir, sessizce hutbegi dinlerse, o cumadan gelecek cumaya kadar olan günahları ve üç gün fazlası bağışlanır.",
+            "metin": "Bir kimse güzelce abdest alır, sonra cumaya gelir, sessizce hutbeyi dinlerse, o cumadan gelecek cumaya kadar olan günahları ve üç gün fazlası bağışlanır.",
             "kaynak": "Müslim, Cuma 27, (857)"
         },
         {
@@ -285,8 +286,8 @@ elif menu == "📜 Ayetler ve Sahih Hadisler":
         """, unsafe_allow_html=True)
 
 # --- 4. FIKIH VE İBADET ---
-elif menu == "⚖️ Cuma İbadeti ve Fıkhı":
-    st.title("⚖️ Cuma Namazının Fıkhı, Şartları ve Adabı")
+elif menu == "⚖️ Cuma İbadeti, Hutbe ve Fıkhı":
+    st.title("⚖️ Cuma Namazının Fıkhı, Şartları, Hutbenin Önemi ve Edep Usulleri")
     st.markdown("---")
 
     col_a, col_b = st.columns(2)
@@ -314,9 +315,99 @@ elif menu == "⚖️ Cuma İbadeti ve Fıkhı":
         * 🤲 **Salavat Getirmek:** Efendimiz (s.a.v.)'e bolca salatü selam okumak.
         """)
 
-# --- 5. ÂLİMLERİN VE VELÎLERİN GÖRÜŞLERİ (20 GÖRÜŞ) ---
-elif menu == "💬 Âlimlerin ve Velîlerin Görüşleri (20 Görüş)":
-    st.title("💬 İslam Âlimlerinin, Velîlerin ve Müfessirlerin Görüşleri (20 Seçkin İfade)")
+    st.markdown("---")
+    st.subheader("📜 Hutbenin Önemi, Şartları ve Dinleme Âdabı")
+    st.markdown("""
+    Cuma namazının sıhhatinin en temel rükünlerinden biri de **Hutbe**dir. Hutbe, sadece bir hitabet kürsüsü değil, Müslümanların haftalık manevi mektebi ve toplumsal şuur merkezidir.
+
+    * **Hutbenin Şartları ve Önemi:**
+      * Hutbe, Cuma namazının farzından **önce** okunur (Önce hutbe, sonra namaz sırası esastır).
+      * Hutbede Allah'a hamt, Peygamber Efendimiz'e (s.a.v.) salatü selam ve cemaate takva (Allah'tan korkma) tavsiyesi yer almalıdır. Ayrıca cemaatin anlayacağı dilde nasihatleri içermelidir.
+      * Toplumun güncel manevi meselelerine ışık tutan, birliği ve kardeşliği pekiştiren ilahi bir ikaz niteliğindedir.
+
+    * **Hutbe Dinleme Âdabı ve Yasaklar:**
+      * **Mutlak Sessizlik:** Hutbe okunmaya başlandığı andan itibaren imamı dinlemek farz hükmündedir. 
+      * **Konuşma Yasağı:** Hutbe okunurken yanındakine "sus" demek bile mekruhtur/yasaktır. Hadis-i şerifte buyrulduğu üzere: *"İmam hutbe irat ederken arkadaşına 'sus' dahi desen, boş söz söylemiş olursun ve Cumanın sevabı (ecri) zayi olur."* (Buhârî, Cuma 36).
+      * **Meşguliyetlerin Bırakılması:** Telefonla oynamak, tespih çekmek, uyuklamak veya başka şeylerle meşgul olmak hutbenin ruhuna ve edep kurallarına aykırıdır. Tüm dikkat ve kulaklar hutbeye verilmelidir.
+    """)
+
+# --- 5. ADIM ADIM CUMA NAMAZININ KILINIŞI ---
+elif menu == "🕌 Adım Adım Cuma Namazının Kılınışı":
+    st.title("🕌 Cuma Namazının Detaylı Kılınış Rehberi")
+    st.caption("Hanefi Mezhebine Göre Cuma Namazının Sıralaması ve Kılınışı")
+    st.markdown("---")
+
+    st.info("Cuma namazı, Cuma günü öğle namazının vaktinde kılınır. Toplamda **10 rekat** (4 rekat ilk sünnet + 2 rekat farz + 4 rekat son sünnet) olarak eda edilir. Arzusuna göre cemaat ardından Zühr-i Âhir ve Vaktin Son Sünnetini de kılar.")
+
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "1️⃣ Cuma İlk Sünneti (4 Rekat)",
+        "2️⃣ İç Ezan & Hutbe",
+        "3️⃣ Cuma Farzı (2 Rekat)",
+        "4️⃣ Cuma Son Sünneti (4 Rekat)",
+        "5️⃣ Zühr-i Âhir ve Vaktin Son Sünneti"
+    ])
+
+    with tab1:
+        st.subheader("🔹 1. Cuma Namazının İlk Sünneti (4 Rekat)")
+        st.markdown("""
+        Öğle ezanı okunduktan sonra camiye girilip eda edilen ilk sünnettir. Aynen Öğle namazının ilk sünneti gibi kılınır.
+
+        * **Niyet:** *"Niyet ettim Allah rızası için Cuma namazının ilk sünnetini kılmaya."*
+        * **1. Rekat:** Tekbir alınır (*Allahü Akbar*), eller bağlanır. *Sübhâneke*, *Eûzü-Besmele*, *Fatiha Suresi* ve bir zammı sure (veya en az 3 kısa ayet) okunur. Rükû ve secdeler yapılır.
+        * **2. Rekat:** Ayağa kalkılır, *Besmele*, *Fatiha Suresi* ve zammı sure okunur. Rükû ve secdelerden sonra oturulur (İlk Oturuş). Sadece *Ettehiyyâtü* duası okunur ve ayağa kalkılır.
+        * **3. Rekat:** *Besmele*, *Fatiha Suresi* ve zammı sure okunur. Rükû ve secdeler yapılır.
+        * **4. Rekat:** *Besmele*, *Fatiha Suresi* ve zammı sure okunur. Rükû ve secdelerin ardından son oturuşa geçilir.
+        * **Son Oturuş:** *Ettehiyyâtü*, *Salli-Barik* ve *Rabbena* duaları okunarak sağa ve sola selam verilir.
+        """)
+
+    with tab2:
+        st.subheader("🔹 2. İç Ezan ve Hutbe")
+        st.markdown("""
+        İlk sünnet kılındıktan sonra müezzin minberin önünde **iç ezanı** okur.
+
+        * **Hutbe Sırası:** Hatip (İmam) minbere çıkar, oturur. İç ezan bittikten sonra ayağa kalkarak hutbeyi okur.
+        * **Manevi Edep:** Cemaat bu sırada hiçbir şey konuşmaz, telefon ve tespihle ilgilenmez, tam bir huşû ile imama yönelerek hutbegi dinler.
+        * Hutbe bittikten sonra müezzin kamet getirir ve farz namaz için saflar sıklaştırılır.
+        """)
+
+    with tab3:
+        st.subheader("🔹 3. Cuma Namazının Farzı (2 Rekat - Cemaatle Kılınır)")
+        st.markdown("""
+        Cuma namazının farzı **2 rekat** olup imam liderliğinde cemaatle açıktan okunarak kılınır.
+
+        * **Niyet:** *"Niyet ettim Allah rızası için Cuma namazının farzını kılmaya, uydum hazır olan imama."*
+        * **1. Rekat:** İmamla birlikte tekbir alınır. Cemaat içinden sadece *Sübhâneke* duasını okur ve susup imamı dinler. İmam açıktan Fatiha ve zammı sure okur. Rükû ve secdeler imamla birlikte yapılır.
+        * **2. Rekat:** Ayağa kalkılır. Cemaat bir şey okumaz, imamı dinler. İmam Fatiha ve zammı sure okuduktan sonra rükû ve secdeler yapılır.
+        * **Son Oturuş:** *Ettehiyyâtü*, *Salli-Barik* ve *Rabbena* duaları sessizce okunur. İmamla birlikte sağa ve sola selam verilir.
+        """)
+
+    with tab4:
+        st.subheader("🔹 4. Cuma Namazının Son Sünneti (4 Rekat)")
+        st.markdown("""
+        Farz kılındıktan ve selam verildikten sonra bireysel olarak kılınan 4 rekatlık sünnettir.
+
+        * **Niyet:** *"Niyet ettim Allah rızası için Cuma namazının son sünnetini kılmaya."*
+        * **Kılınış:** Tıpkı Cuma namazının ilk sünneti ve Öğle namazının ilk sünneti gibi 4 rekat olarak tek başına kılınır ve selam verilir.
+        """)
+
+    with tab5:
+        st.subheader("🔹 5. Zühr-i Âhir ve Vaktin Son Sünneti (İhtiyat İbadetleri)")
+        st.markdown("""
+        Son sünnetten sonra ihtiyaten ve tedbiren eda edilen namazlardır:
+
+        * **1. Zühr-i Âhir (4 Rekat):**
+          * *"Son Öğle Namazı"* anlamına gelir. Cuma namazının şartlarında bir eksiklik olma ihtimaline binaen o günkü öğle namazı niyetine kılınır.
+          * **Niyet:** *"Niyet ettim vaktine yetişip de henüz üzerimden sakıt olmayan son öğle namazının farzını kılmaya."*
+          * **Kılınışı:** Öğle namazının 4 rekatlık farzı gibi kılınır (3. ve 4. rekatlarda Fatiha'dan sonra zammı sure okunmaz).
+        * **2. Vaktin Son Sünneti (2 Rekat):**
+          * **Niyet:** *"Niyet ettim Allah rızası için vaktin son sünnetini kılmaya."*
+          * **Kılınışı:** Tıpkı Sabah namazının sünneti gibi 2 rekat kılınır ve selam verilir.
+        * **Tesbihat ve Dua:** Namaz tamamlandıktan sonra Ayete'l-Kürsi okunur, 33'er defa *Sübhânallâh*, *Elhamdülillâh*, *Allâhü Akbar* denilerek dua edilir.
+        """)
+
+# --- 6. ÂLİMLERİN VE VELÎLERİN GÖRÜŞLERİ ---
+elif menu == "💬 Âlimlerin ve Velîlerin Görüşleri":
+    st.title("💬 İslam Âlimlerinin, Velîlerin ve Müfessirlerin Görüşleri")
     st.caption("Kaynak: Tabakat, İhyâ, Mesnevî, Risale-i Nur ve Muteber Tefsir Külliyatları")
     st.markdown("---")
 
@@ -339,7 +430,7 @@ elif menu == "💬 Âlimlerin ve Velîlerin Görüşleri (20 Görüş)":
         {"alim": "Hacı Bayram-ı Velî (k.s.)", "soz": "Omuz omuza saf tutulan Cuma vakitlerinde gıybet ve kin erir, yerini muhabbet ve ünsiyete bırakır.", "kaynak": "Makalât"},
         {"alim": "Ebu'l-Hasan el-Harakânî (k.s.)", "soz": "Cuma günü yetimin başını okşayan, bir fukaraya ekmek veren kimse, o günün bereket pınarından kanarak içer.", "kaynak": "Nûru'l-Ulûm"},
         {"alim": "İbn Kasiy el-Endelüsî (k.s.)", "soz": "Cuma günü haftanın kalbidir. Kalp diri olursa, bütün beden diri olur.", "kaynak": "Hal'u'n-Na'leyn"},
-        {"alim": "Bediüzzaman Said Nursî (r.a.)", "soz": "Cuma günü, alem-i İslam'ın haftalık muazzam bir kongresidir. Müminlerin omuz omuza vermesi vahdet-i İslamiyeyi ilan eder.", "kaynak": "Sözler, 21. Söz"},
+        {"alim": "Bediüzzaman Said Nursî (r.a.)", "soz": "Cuma günü, alem-i İslam'ın haftalık muazzam bir kongresidir. Müminlerin omuz omuza vermesi vahdet-i İslamiyeyi ilan eder ve hafta boyunca yapılan manevi ticaretin kâr hanesini aydınlatır.", "kaynak": "Sözler, 21. Söz / Mektûbât"},
         {"alim": "Elmalılı Hamdi Yazır (r.a.)", "soz": "Cuma namazı; hem ibadet hem toplumsal ahenk hem de müminlerin birbirinin durumundan haberdar olma vesilesidir.", "kaynak": "Hak Dini Kur'an Dili, c. 7"}
     ]
 
@@ -352,9 +443,9 @@ elif menu == "💬 Âlimlerin ve Velîlerin Görüşleri (20 Görüş)":
             </div>
         """, unsafe_allow_html=True)
 
-# --- 6. HUKUKİ BİLDİRİM VE ŞARTLAR ---
-elif menu == "⚖️ Hukuki Bildirim & Şartlar":
-    st.title("⚖️ Hukuki Bildirim, Kullanım Şartları ve Telif Hakları")
+# --- 7. HUKUKİ BİLDİRİM VE ŞARTLAR ---
+elif menu == "⚖️ Hukuki Bildirim & Kullanım Şartları":
+    st.title("⚖️ Hukuki Bildirim ve Kullanım Şartları")
     st.markdown("---")
 
     st.warning("Lütfen bu platformda yer alan içeriklerin kullanımıyla ilgili aşağıdaki hukuki hükümleri dikkatlice okuyunuz.")
@@ -367,7 +458,7 @@ elif menu == "⚖️ Hukuki Bildirim & Şartlar":
     * Bu sitede sunulan hiçbir içerik, görsel, metin veya yazılım kodu *ticari amaçlarla kullanılamaz, satılamaz, kiralanamaz veya pazarlanamaz*.
     * Platform tamamen ücretsiz olup, herhangi bir maddi kazanç amacı gütmemektedir.
 
-    ### 3. Telif Hakları ve Kopyalama Yasağı (FİKİR VE SANAT ESERLERİ KANUNU)
+    ### 3. Fikir ve Sanat Eserleri Kanunu Koruması ve Kopyalama Yasağı
     * Bu web sitesinde yer alan tüm tasarım, derleme, metin düzenlemeleri ve kod altyapısı *5846 Sayılı Fikir ve Sanat Eserleri Kanunu* uyarınca korunmaktadır.
     * Sitede yer alan metinlerin tamamı veya bir kısmı; izin alınmaksızın *kopyalanamaz, başka sitelerde yayınlanamaz, çoğaltılamaz ve dağıtılamaz*.
     * Kod seviyesinde entegre edilen kopyalama ve sağ tık engellerinin teknik yollarla aşılması hukuki sorumluluk doğurur.
